@@ -16,7 +16,6 @@ public class TextStats {
 		
 		Scanner text = textReader.getScannedText(fileName);
 		
-		text.useDelimiter(" ");
 		
 		int numberOfWords = 0;
 		
@@ -86,7 +85,9 @@ public class TextStats {
 			plainText += text.next();
 		}
 		
-		
+		if(plainText.equals("")) {
+			return ' ';
+		}
 		
 		int highestFrequency = 0;
 		char mostCommonCharacter = plainText.charAt(0);
@@ -99,7 +100,7 @@ public class TextStats {
 			for(int j = 0; j < plainText.length(); j++) {
 				
 				if(character == plainText.charAt(j)) {
-					tempCount++;
+					characterCount++;
 				}
 			}
 			

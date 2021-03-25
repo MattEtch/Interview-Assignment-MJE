@@ -8,7 +8,7 @@ public class TextReader {
 
 	public Scanner getScannedText(String fileName) throws FileNotFoundException {
 		
-		File file = new File("Test.txt");
+		File file = new File(fileName);
 		Scanner scannedText = new Scanner(file);
 		return scannedText;
 		
